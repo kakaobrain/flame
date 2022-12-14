@@ -1,0 +1,7 @@
+_target_: src.datamodules.humanml3d_datamodule.HumanML3DDataModule
+
+data_dir: ${data_dir}
+batch_size: 32
+num_workers: 16
+pin_memory: false
+split_setting: "final"  # one of a ["split", "final", "demo"]

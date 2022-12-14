@@ -1,0 +1,17 @@
+_target_: src.models.mclip_module.MotionClipLitModule
+lr: 0.0001
+weight_decay: 0.0
+
+net:
+  _target_: src.models.components.mclip.MCLIP
+  menc_n_layers: 6
+  menc_n_heads: 8
+  menc_input_dim: 147
+  menc_embed_dim: 512
+  menc_lm_hidden_size: 512
+  menc_dim_feedforward: 768
+  menc_dropout: 0.1
+  max_motion_length: 471
+  tau: 0.07
+  freeze_lm: true
+  

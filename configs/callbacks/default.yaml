@@ -1,0 +1,28 @@
+model_checkpoint:
+  _target_: pytorch_lightning.callbacks.ModelCheckpoint
+  monitor: "val/loss" # name of the logged metric which determines when model is improving
+  mode: "min" # "max" means higher metric value is better, can be also "min"
+  save_top_k: 5 # save k best models (determined by above metric)
+  save_last: True # additionaly always save model from last epoch
+  verbose: False
+  dirpath: "checkpoints/"
+  filename: "epoch_{epoch:03d}"
+  auto_insert_metric_name: False
+
+# early_stopping:
+#   _target_: pytorch_lightning.callbacks.EarlyStopping
+#   monitor: "val/loss" # name of the logged metric which determines when model is improving
+#   mode: "min" # "max" means higher metric value is better, can be also "min"
+#   patience: 1000 # how many validation epochs of not improving until training stops
+#   min_delta: 0 # minimum change in the monitored metric needed to qualify as an improvement
+
+lr_monitor:
+  _target_: pytorch_lightning.callbacks.LearningRateMonitor
+  logging_interval: "step"
+
+model_summary:
+  _target_: pytorch_lightning.callbacks.RichModelSummary
+  max_depth: 1
+
+rich_progress_bar:
+  _target_: pytorch_lightning.callbacks.RichProgressBar

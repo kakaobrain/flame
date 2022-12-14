@@ -1,0 +1,8 @@
+ckpt_path: "[CKPT PATH]"
+motion_length: 200
+guidance_scale: 8.0
+labels_for_gen: ["a person kicks with his right leg.", "a person kicks with his left leg."]
+plot_gif: false
+export_json: true
+use_smoothing: true
+fps: 20

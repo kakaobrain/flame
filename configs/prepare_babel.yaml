@@ -1,0 +1,6 @@
+target_fps: 20
+prepare_babel: true
+babel_motion_length: 128
+babel_offset: 10
+suffix: ""
+labels: []

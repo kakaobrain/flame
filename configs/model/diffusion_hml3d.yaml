@@ -1,0 +1,30 @@
+_target_: src.models.diffusion_module.DiffusionLitModule
+diffusion_steps: 1000
+beta_schedule: "squaredcos_cap_v2"
+schedule_sampler: "uniform"
+text_replace_prob: 0.25
+lr: 0.0001
+weight_decay: 0.0
+ema_start: 100
+ema_update: 10
+ema_decay: 0.99
+sampling_strategy: "ddpm"  # "ddpm" or "ddim"
+epoch_sample_every: 50
+sample_fps: 20
+sampling_length: 200
+sampling_texts: ["someone practices ballet dance.", "a person practices salsa dance.", "a person climbs up and down steps in a square.", "a person waves his left hand."]
+guidance_scale: 8.0
+
+
+net:
+  _target_: src.models.components.text2motion_model.Text2MotionTransformer
+  motion_dim: 147
+  lm_hidden_size: 768
+  model_channels: 768
+  max_motion_length: 471
+  max_text_length: 20
+  num_heads: 8
+  dim_feedforward: 2048
+  dropout: 0.1
+  num_layers: 8
+  freeze_lm: true

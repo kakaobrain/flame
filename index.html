@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FLAME</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </head>
+<!-- cover -->
+
+<body>
+    <section>
+        <div class="jumbotron jumbotron-fluid text-center ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1>FLAME: Free-form Language-based Motion Synthesis & Editing</h1>
+                        <h5>The 37th AAAI Conference on Artificial Intelligence, 2023</h5>
+						<h5>
+							Jihoon Kim<sup>1,2</sup>&nbsp;&nbsp;&nbsp;
+							Jiseob Kim</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
+							Sungjoon Choi</a><sup>1</sup>
+							<p></p>
+							Korea University<sup>1</sup><br>
+							Kakao Brain<sup>2</sup><br>
+						</h5>
+                        <hr>
+                        <ul class="nav justify-content-center">
+                            <li>
+                                <a href="https://arxiv.org/abs/2209.00349">
+                                    <button type="button" class="btn btn-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                                        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"></path>
+                                        </svg>
+                                        Paper
+                                    </button>
+                                </a>
+                            </li>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <li>
+                                <a href="https://youtu.be/LbPNGv0zrto">
+                                    <button type="button" class="btn btn-danger">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"></path>
+                                        </svg>
+                                        YouTube
+                                    </button>
+                                </a>
+                            </li>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <li>
+                                <a href="https://github.com/kakaobrain/flame">
+                                    <button type="button" class="btn btn-dark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                                        </svg>
+                                        Code
+                                    </button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3><b>Abstract</b></h3>
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-justify">
+                        Text-based motion generation models are drawing a surge of interest for their potential for automating the motion-making process in the game, animation, or robot industries. In this paper, we propose a diffusion-based motion synthesis and editing model named FLAME. Inspired by the recent successes in diffusion models, we integrate diffusion-based generative models into the motion domain. FLAME can generate high-fidelity motions well aligned with the given text. Also, it can edit the parts of the motion, both frame-wise and joint-wise, without any fine-tuning. FLAME involves a new transformer-based architecture we devise to better handle motion data, which is found to be crucial to manage variable-length motions and well attend to free-form text. In experiments, we show that FLAME achieves state-of-the-art generation performances on three text-motion datasets: HumanML3D, BABEL, and KIT. We also demonstrate that editing capability of FLAME can be extended to other tasks such as motion prediction or motion in-betweening, which have been previously covered by dedicated models.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <h3><b>Architecture</b></h3>
+                <div class="row col-12 ">
+                <img src="./assets/architecture.png">
+                <p>FLAME learns the denoising process \(p_{\theta}\) from \(\boldsymbol{M}_{t}\) to \(\boldsymbol{M}_{t-1}\) at diffusion time-step \(t\). Input motion is projected and concatenated with language pooler token (CLS), motion-length token (ML), and diffusion time-step token (TS) as input tokens for the transformer decoder. Additional language-side information is fed from a pre-trained frozen language encoder as a cross-attention context. FLAME outputs a \(2\cdot D_{mo}\)-dimensional sequence of vectors as it predicts both the mean and variance of noise at each diffusion time-steps.</p>
+                </div>
+            </div>
+      </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3><b>Text-to-Motion Generation</b></h3>
+            <div id="t2mCarousel" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#t2mCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#t2mCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#t2mCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#t2mCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#t2mCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <p class="text-center fw-bolder fst-italic">
+                    Left: "A person kicks with his right leg."<br>
+                    Right: "A person kicks with his left leg."
+                    </p>
+                    <video class="img-fluid" autoplay loop muted>
+                        <source src="./assets/lr_kick.mp4" type="video/mp4"/>
+                    </video>
+                  </div>
+
+                  <div class="carousel-item">
+                    <p class="text-center fw-bolder fst-italic">
+                    "A person walks forward and then bends down to pick up something."
+                    </p>
+                    <video class="img-fluid" autoplay loop muted>
+                        <source src="./assets/walk_and_pickup.mp4" type="video/mp4"/>
+                    </video>
+                  </div>
+
+                  <div class="carousel-item">
+                    <p class="text-center fw-bolder fst-italic">
+                        "A person throws and catches an object."
+                        </p>
+                        <video class="img-fluid" autoplay loop muted>
+                            <source src="./assets/throw_catch.mp4" type="video/mp4"/>
+                        </video>
+                  </div>
+
+                  <div class="carousel-item">
+                    <p class="text-center fw-bolder fst-italic">
+                    Left: "Someone performs ballet dance."<br>
+                    Middle: "A person dances in the style of a ballerina."<br>
+                    Right: "A person spins while practicing a ballet routine."
+                    </p>
+                    <video class="img-fluid" autoplay loop muted>
+                        <source src="./assets/ballet.mp4" type="video/mp4"/>
+                    </video>
+                  </div>
+
+                  <div class="carousel-item">
+                    (From left to right)
+                    <p class="text-center fw-bolder fst-italic">
+                    Left: "A person practices salsa dance."<br>
+                    Middle: "A person starts salsa dance."<br>
+                    Right: "Someone is doing the salsa dance."
+                    </p>
+                    <video class="img-fluid" autoplay loop muted>
+                        <source src="./assets/salsa.mp4" type="video/mp4"/>
+                    </video>
+                  </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#t2mCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#t2mCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+            <h3><b>Text-based Motion Editing</b></h3>
+            <div id="editCarousel" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#editCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#editCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#editCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h3>Lower-body fixed. (From left to right)</h3>
+                    <p class="text-center fw-bolder fst-italic">
+                    1: Reference motion<br>
+                    2: "A person is dancing."<br>
+                    3: "A person dribbles a ball."<br>
+                    4: "A person is clapping."
+                    <video class="img-fluid" autoplay loop muted>
+                        <source src="./assets/edit_dance_dribble_clap.mp4" type="video/mp4"/>
+                    </video>
+                  </div>
+
+                  <div class="carousel-item">
+                    <h3>Lower-body fixed. (From left to right)</h3>
+                    <p class="text-center fw-bolder fst-italic">
+                    1: Reference motion<br>
+                    2: "A person throws and catches a ball."<br>
+                    3: "A person makes a phone call."<br>
+                    4: "A person is playing a violin."
+                    <video class="img-fluid" autoplay loop muted>
+                        <source src="./assets/edit_throw_phone_violin.mp4" type="video/mp4"/>
+                    </video>
+                  </div>
+
+                  <div class="carousel-item">
+                    <h3>Upper-body fixed. (From left to right)</h3>
+                    <p class="text-center fw-bolder fst-italic">
+                    1: Reference motion<br>
+                    2: "A person walks forward."<br>
+                    3: "A person walks backward."<br>
+                    4: "A person jumps several times."
+                    </p>
+                    <video class="img-fluid" autoplay loop muted>
+                        <source src="./assets/edit_walk_jump.mp4" type="video/mp4"/>
+                    </video>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#editCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#editCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3><b>Motion Prediction & In-betweening</b></h3>
+            <div id="pibCarousel" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#pibCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#pibCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h3>Motion Prediction</h3>
+                    <p class="text-center fw-bolder fst-italic">
+                    Reference: Green<br>
+                    Left: Reference motion<br>
+                    Middle: Motion prediction without prompt<br>
+                    Right: Motion prediction with prompt "a person is clapping."
+                    </p>
+                    <video class="img-fluid" autoplay loop muted>
+                        <source src="./assets/prediction.mp4" type="video/mp4"/>
+                    </video>
+                  </div>
+
+                  <div class="carousel-item">
+                    <h3>Motion In-betweening</h3>
+                    <p class="text-center fw-bolder fst-italic">
+                    Reference: Green<br>
+                    Left: Reference motion<br>
+                    Middle: Motion in-betweening without prompt<br>
+                    Right: Motion in-betweening with prompt "a person is clapping."
+                    </p>
+                    <video class="img-fluid" autoplay loop muted>
+                        <source src="./assets/inbetweening.mp4" type="video/mp4"/>
+                    </video>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#pibCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#pibCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- citing -->
+    <div class="container">
+        <div class="row ">
+            <div class="col-12">
+                <h3>Citation</h3>
+                <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+                    <code>
+                        @article{kim2022flame,
+                            title={Flame: Free-form language-based motion synthesis & editing},
+                            author={Kim, Jihoon and Kim, Jiseob and Choi, Sungjoon},
+                            journal={arXiv preprint arXiv:2209.00349},
+                            year={2022}
+                          }
+                    </code>
+                </pre>
+                <hr>
+            </div>
+        </div>
+    </div>
+</body>

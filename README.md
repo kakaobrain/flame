@@ -1,6 +1,6 @@
 # FLAME: Free-form Language-based Motion Synthesis & Editing
 
-[[Paper]](https://arxiv.org/abs/2209.00349) | [[Video]](https://youtu.be/LbPNGv0zrto)
+[[Project Page]](https://kakaobrain.github.io/flame/) | [[Paper]](https://arxiv.org/abs/2209.00349) | [[Video]](https://youtu.be/LbPNGv0zrto)
 
 Official Implementation of the paper ***FLAME: Free-form Language-based Motion Synthesis & Editing (AAAI'23)*** 
 

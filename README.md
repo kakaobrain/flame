@@ -178,6 +178,10 @@ Training configs can be set by config files in `configs/` or by command line arg
 python train.py
 ```
 
+## Testing
+
+***Testing takes a long time, since it needs to generate all samples in testset.*** You need to run `test.py` with proper config settings at `configs/test.yaml`. Then, you can run `eval_util.py` to evaluate the results.
+
 ## Sampling
 
 ### Text-to-Motion Generation

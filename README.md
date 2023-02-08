@@ -18,6 +18,14 @@ This project is tested on the following environment. Please install them on your
 
 ## Prerequisites
 
+### Packages
+
+You may need following packages to run this repo.
+
+```bash
+apt install libglfw3-dev libgles2-mesa-dev freeglut3-dev libosmesa6-dev libgl1-mesa-glx 
+```
+
 ### Dataset
 
 > :exclamation: We cannot directly provide original data files to abide by the license.

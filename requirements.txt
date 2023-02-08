@@ -6,7 +6,7 @@ git+https://github.com/MPI-IS/mesh.git
 # --------- pytorch --------- #
 torch>=1.10.0
 torchvision>=0.11.0
-pytorch-lightning>=1.5.10
+pytorch-lightning==1.5.10
 torchmetrics>=0.7.0
 
 # --------- hydra --------- #
@@ -33,7 +33,7 @@ pudb            # debugger
 pandas
 
 # --------- models --------- #
-transformers==4.21.1  # https://github.com/huggingface/transformers/issues/19214
+transformers==4.19.2  # https://github.com/huggingface/transformers/issues/19214
 ftfy
 
 # --------- visualization --------- #

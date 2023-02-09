@@ -23,7 +23,7 @@ This project is tested on the following environment. Please install them on your
 You may need following packages to run this repo.
 
 ```bash
-apt install libglfw3-dev libgles2-mesa-dev freeglut3-dev libosmesa6-dev libgl1-mesa-glx 
+apt install libboost-dev libglfw3-dev libgles2-mesa-dev freeglut3-dev libosmesa6-dev libgl1-mesa-glx 
 ```
 
 ### Dataset

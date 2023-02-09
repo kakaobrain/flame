@@ -6,7 +6,7 @@ git+https://github.com/MPI-IS/mesh.git
 # --------- pytorch --------- #
 torch>=1.10.0
 torchvision>=0.11.0
-pytorch-lightning==1.5.10
+pytorch-lightning==1.8.6
 torchmetrics>=0.7.0
 
 # --------- hydra --------- #

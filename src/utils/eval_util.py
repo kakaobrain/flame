@@ -32,18 +32,18 @@ def compute_metrics(output_dir: str):
     with open(stat_path, "rb") as f:
         ref_stats = pickle.load(f)
     fid = compute_fid(meta_data, ref_stats)
-    mm_distance = compute_mm_distance(meta_data)
+    # mm_distance = compute_mm_distance(meta_data)
     clip_score = compute_clip_score(meta_data)
-    ape_ave = compute_ape_ave(meta_data)
-    # mid = compute_mid(meta_data)  # For MID Computation, Please refer to https://github.com/naver-ai/mid.metric
+    # ape_ave = compute_ape_ave(meta_data)
+    # mid = compute_mid(meta_data)  # For MID Computation, Please refer to https://github.com/naver-ai/mid.metric, use the epsilon of 5e-4 as the author suggested.
 
     return {
         "r_precision": r_precision,
         "fid": fid,
-        "mm_distance": mm_distance,
+        # "mm_distance": mm_distance,
         "clip_score": clip_score,
         # "mid": mid,
-        "ape_ave": ape_ave,
+        # "ape_ave": ape_ave,
     }
 
 
@@ -244,10 +244,10 @@ def compute_mm_distance(meta_data):
     mm_distances_norm = []
     for meta in meta_data:
         mm_distances.append(meta["mm_distance"])
-        mm_distances_norm.append(meta["mm_distance_norm"])
+        # mm_distances_norm.append(meta["mm_distance_norm"])
     return {
         "mm_distance": np.mean(mm_distances),
-        "mm_distance_norm": np.mean(mm_distances_norm),
+        # "mm_distance_norm": np.mean(mm_distances_norm),
     }
 
 
@@ -256,10 +256,10 @@ def compute_clip_score(meta_data):
     clip_scores_norm = []
     for meta in meta_data:
         clip_scores.append(meta["clip_score"])
-        clip_scores_norm.append(meta["clip_score_norm"])
+        # clip_scores_norm.append(meta["clip_score_norm"])
     return {
         "clip_score": np.mean(clip_scores),
-        "clip_score_norm": np.mean(clip_scores_norm),
+        # "clip_score_norm": np.mean(clip_scores_norm),
     }
 
 

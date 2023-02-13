@@ -261,7 +261,7 @@ class DiffusionLitModule(LightningModule):
         logging.info(f"Motion CLIP is loaded from {mclip_ckpt}")
 
         # Prepare dir for generated motions
-        output_dir = Path(os.getcwd()) / "generated_motions"
+        output_dir = Path(os.getcwd())
         output_dir.mkdir(exist_ok=True, parents=True)
         self.output_dir = output_dir
 
@@ -296,7 +296,7 @@ class DiffusionLitModule(LightningModule):
         self.test_annotations = full_test_anns
 
     def on_test_end(self):
-        metrics = compute_metrics(meta_dir=self.output_dir, stat_path=self.stats_path)
+        metrics = compute_metrics(output_dir=self.output_dir)
         result_file = Path(os.getcwd()) / "eval.json"
         with open(result_file, "w") as f:
             json.dump(metrics, f)

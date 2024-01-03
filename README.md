@@ -93,7 +93,7 @@ You can access full HumanML3D dataset at [HumanML3D](https://github.com/EricGuo5
 └── val.txt
 ```
 
-Note that the files above are located at: `data/HumanML3D/`. Please download [`humanact12`](https://arena.kakaocdn.net/brainrepo/models/FLAME/HumanML3D/e3a6de68c95a042fbc0abba7a0222d58/humanact12_processed.pkl) and [`HumanML3D.csv`](https://arena.kakaocdn.net/brainrepo/models/FLAME/HumanML3D/ef9f9ed8a99e3cd20226e454f9c4e2f7/HumanML3D.csv). You can download other files from the original repo.
+Note that the files above are located at: `data/HumanML3D/`. Please download [`humanact12`](https://twg.kakaocdn.net/brainrepo/models/FLAME/HumanML3D/e3a6de68c95a042fbc0abba7a0222d58/humanact12_processed.pkl) and [`HumanML3D.csv`](https://twg.kakaocdn.net/brainrepo/models/FLAME/HumanML3D/ef9f9ed8a99e3cd20226e454f9c4e2f7/HumanML3D.csv). You can download other files from the original repo.
 </details>
 
 ### SMPL & DMPL Models
@@ -242,10 +242,10 @@ python edit_motion.py
 ## Pretrained Weights
 
 ### HumanML3D
-* [Model](https://arena.kakaocdn.net/brainrepo/models/FLAME/weights/eefcd30a4138bf74fbb6d10b7731abe9/flame_hml3d_bc.ckpt) / [mCLIP](https://arena.kakaocdn.net/brainrepo/models/FLAME/weights/5d1aee3a89f046f9b7ec95ecbbd59b04/flame_mclip_hml3d_bc.ckpt)
+* [Model](https://twg.kakaocdn.net/brainrepo/models/FLAME/weights/eefcd30a4138bf74fbb6d10b7731abe9/flame_hml3d_bc.ckpt) / [mCLIP](https://twg.kakaocdn.net/brainrepo/models/FLAME/weights/5d1aee3a89f046f9b7ec95ecbbd59b04/flame_mclip_hml3d_bc.ckpt)
 
 ### BABEL
-* [Model](https://arena.kakaocdn.net/brainrepo/models/FLAME/weights/6ee93b403203cb41bd8ee9f4a7c9bdb2/flame_babel_bc.ckpt) / [mCLIP](https://arena.kakaocdn.net/brainrepo/models/FLAME/weights/424f0c9ba8e7641e0d0406134c13ad97/flame_mclip_babel_bc.ckpt)
+* [Model](https://twg.kakaocdn.net/brainrepo/models/FLAME/weights/6ee93b403203cb41bd8ee9f4a7c9bdb2/flame_babel_bc.ckpt) / [mCLIP](https://twg.kakaocdn.net/brainrepo/models/FLAME/weights/424f0c9ba8e7641e0d0406134c13ad97/flame_mclip_babel_bc.ckpt)
 
 ## Citation
 
